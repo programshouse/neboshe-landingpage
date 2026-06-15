@@ -47,10 +47,9 @@ const VALUES: { icon: Icon; title: string }[] = [
 
 export function StrategySection() {
   return (
-    <section className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:py-20">
+    <section className="mx-auto max-w-[1240px] px-4 py-12 sm:px-6 lg:py-16">
       <h2 className="text-3xl font-bold text-navy sm:text-4xl">Our Strategy</h2>
 
-      {/* Feature cards */}
       <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {FEATURES.map(({ icon: Icon, title, text }) => (
           <article
@@ -70,13 +69,12 @@ export function StrategySection() {
         ))}
       </div>
 
-      {/* CEO message banner */}
       <CeoMessage />
 
-      {/* Values */}
       <h2 className="mt-16 text-center text-3xl font-bold text-navy sm:text-4xl">
         Our Strategy
       </h2>
+
       <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
         {VALUES.map(({ icon: Icon, title }) => (
           <article
@@ -98,67 +96,60 @@ export function StrategySection() {
 
 function CeoMessage() {
   return (
-    <div className="mt-8 grid overflow-hidden rounded-2xl bg-accent lg:grid-cols-2">
-      {/* Left: portrait + text */}
-      <div className="flex flex-col gap-5 sm:flex-row">
-        <div className="relative w-full max-w-[140px] shrink-0 self-stretch sm:w-36">
+    <div className="mt-8 grid min-h-[200px] overflow-hidden rounded-[10px] bg-[#e9eef6] lg:grid-cols-[58.5%_41.5%]">
+      <div className="flex min-h-[200px]">
+        <div className="relative w-[155px] shrink-0">
           <img
             src="/images/graduate.png"
             alt="NEBOSHE chief executive in graduation cap and gown"
-            className="h-full w-full object-cover object-top"
+            className="absolute bottom-0 left-4 h-[182px] w-[128px] object-contain object-bottom"
           />
         </div>
-        <div className="px-2 py-6 pr-6 sm:py-8">
-          <h3 className="text-lg font-bold text-navy">
+
+        <div className="flex flex-col justify-center py-5 pr-8">
+          <h3 className="text-[21px] font-bold leading-[1.2] tracking-[-0.02em] text-[#082c75]">
             A message from our chief exclusive
           </h3>
-          <p className="mt-3 max-w-md text-sm leading-relaxed text-muted-foreground">
-            Our 2024 - 2027 Strategy is built on collaboration, innovation and a
+
+          <p className="mt-[10px] max-w-[485px] text-[11px] font-medium leading-[1.45] tracking-[0.01em] text-[#4b5563]">
+            Our 2024 - 2027 Strategy is built on collaboration , innovation and a
             deep commitment to our global community. Together, we will continue
-            to raise standards and developers the skills needed to create safer,
-            healthier workplaces for all.
+            to raise standards and developers the skills needed to create safer ,
+            healthier workplace for all.
           </p>
+
           <button
             type="button"
-            className="mt-6 rounded-md bg-navy px-5 py-2.5 text-sm font-semibold text-primary-foreground transition hover:bg-navy-dark"
+            className="mt-[22px] h-[30px] w-fit rounded-[4px] bg-[#082c75] px-[14px] text-[11px] font-semibold leading-none text-white transition hover:bg-[#061f55]"
           >
             Watch Full Message
           </button>
         </div>
       </div>
 
-      {/* Right: strategy video card */}
-      <div className="relative min-h-56 overflow-hidden">
-        <img
-          src="/images/strategy-banner.png"
-          alt="Construction workers on site at dusk"
-          className="absolute inset-0 h-full w-full object-cover"
-        />
-        <div className="absolute inset-0 bg-navy/80" aria-hidden="true" />
-        <div className="relative flex h-full items-center gap-5 px-6 py-8 sm:px-8">
-          <div className="flex flex-col items-center text-primary-foreground">
-            <NeboshLogo className="h-16 w-16 text-navy-dark" />
-            <span className="mt-1 text-xs font-bold tracking-widest">
-              NEBOSHE
-            </span>
+      <div className="flex min-h-[182px] items-center justify-center bg-[#062765] p-[10px]">
+        <div className="relative h-full min-h-[162px] w-full overflow-hidden rounded-[8px] bg-[#082c75]">
+          <img
+            src="/images/strategy-banner.png"
+            alt="Construction workers on site at dusk"
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+
+
+
+          <div className="relative flex h-full items-center px-[22px] py-5 text-white">
+   
+
+
+
+            <button
+              type="button"
+              aria-label="Play strategy video"
+              className="ml-auto grid h-[46px] w-[46px] shrink-0 place-items-center rounded-full bg-[#062765]/80 ring-[4px] ring-white transition hover:bg-[#062765]"
+            >
+              <PlayIcon className="h-[18px] w-[18px] translate-x-[2px] text-white" />
+            </button>
           </div>
-          <div className="text-primary-foreground">
-            <p className="text-xl font-bold leading-tight sm:text-2xl">
-              NEBOSHE Strategy
-              <br />
-              <span className="text-2xl sm:text-3xl">2024-2027</span>
-            </p>
-            <p className="mt-1 text-sm text-white/80">
-              Developing our potentiale
-            </p>
-          </div>
-          <button
-            type="button"
-            aria-label="Play strategy video"
-            className="ml-auto grid h-12 w-12 shrink-0 place-items-center rounded-full bg-white/15 ring-2 ring-white/40 transition hover:bg-white/25"
-          >
-            <PlayIcon className="h-5 w-5 translate-x-0.5 text-primary-foreground" />
-          </button>
         </div>
       </div>
     </div>

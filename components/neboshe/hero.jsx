@@ -1,36 +1,54 @@
 import { ArrowRightIcon } from './icons'
 
+const heroImages = [
+  {
+    src: '/images/image 15.png',
+    alt: 'Graduate taking a selfie at a ceremony',
+    className: 'object-[center_center]',
+  },
+  {
+    src: '/images/image 16.png',
+    alt: 'Industrial safety worker wearing protective equipment',
+    className: 'object-[center_center]',
+  },
+  {
+    src: '/images/image 19 (1).png',
+    alt: 'NEBOSH safety representative in a high visibility vest',
+    className: 'object-[center_center]',
+  },
+]
+
 export function Hero() {
   return (
-    <section className="relative overflow-hidden">
-      <div className="grid lg:grid-cols-2">
+    <section className="relative w-full overflow-hidden bg-white">
+      <div className="grid min-h-[250px] lg:grid-cols-[32.5%_67.5%]">
         {/* Left navy panel */}
-        <div className="relative bg-navy px-6 py-12 text-primary-foreground sm:px-10 lg:py-16">
-          {/* subtle radial accent */}
+        <div className="relative z-10 flex bg-[#082c75] px-5 py-5 text-white sm:px-7 lg:min-h-[250px] lg:px-7 lg:py-5">
           <div
-            className="pointer-events-none absolute inset-0 opacity-40"
+            className="pointer-events-none absolute inset-0"
             style={{
               background:
-                'radial-gradient(120% 80% at 0% 0%, oklch(0.45 0.14 262) 0%, transparent 60%)',
+                'linear-gradient(135deg, rgba(10, 58, 145, 0.9) 0%, rgba(8, 44, 117, 1) 58%, rgba(5, 29, 78, 1) 100%)',
             }}
             aria-hidden="true"
           />
-          <div className="relative mx-auto max-w-xl lg:ml-auto lg:mr-0 lg:max-w-lg">
-            <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-medium ring-1 ring-white/20">
-              <span className="h-1.5 w-1.5 rounded-full bg-white" />
+
+          <div className="relative flex max-w-[360px] flex-col justify-center">
+            <span className="inline-flex w-fit items-center gap-1.5 rounded-full bg-white px-2.5 py-1 text-[10px] font-semibold leading-none text-[#082c75] shadow-sm">
+              <span className="h-1.5 w-1.5 rounded-full bg-[#082c75]" />
               2024-2027 Strategy
             </span>
 
-            <h1 className="mt-6 text-4xl font-bold leading-tight text-balance sm:text-5xl lg:text-6xl">
+            <h1 className="mt-4 max-w-[320px] text-[30px] font-semibold leading-[1.08] tracking-[-0.02em] text-white sm:text-[34px] lg:text-[36px]">
               Developing Our Potential
             </h1>
 
-            <p className="mt-5 max-w-md text-sm leading-relaxed text-white/80 sm:text-base">
+            <p className="mt-3 max-w-[295px] text-[11px] font-normal leading-[1.45] text-white/90">
               Our strategy empowers people and organizations worldwide to build
               safer, healthier and more sustainable workplaces
             </p>
 
-            <div className="mt-8 flex flex-wrap gap-4">
+            <div className="mt-5 flex items-center gap-3">
               <ApplyButton variant="light" />
               <ApplyButton variant="outline" />
             </div>
@@ -38,36 +56,43 @@ export function Hero() {
         </div>
 
         {/* Right image collage */}
-        <div className="relative min-h-64 lg:min-h-0">
-          <img
-            src="/images/hero-collage.png"
-            alt="Graduates celebrating, an industrial worker in a hard hat, and workers in high-visibility safety vests"
-            className="absolute inset-0 h-full w-full object-cover"
-          />
+        <div className="grid min-h-[250px] grid-cols-[34%_33%_33%] overflow-hidden lg:min-h-[250px]">
+          {heroImages.map((image) => (
+            <div key={image.src} className="relative min-h-[250px] overflow-hidden">
+              <img
+                src={image.src}
+                alt={image.alt}
+                className={`h-full w-full object-cover ${image.className}`}
+              />
+            </div>
+          ))}
         </div>
       </div>
     </section>
   )
 }
 
-function ApplyButton({ variant }) {
+function ApplyButton({ variant = 'light' }) {
   const isLight = variant === 'light'
+
   return (
     <button
       type="button"
-      className={`group inline-flex items-center gap-3 rounded-md px-5 py-2.5 text-sm font-semibold transition ${
+      className={`group inline-flex h-8 items-center gap-2 rounded-[3px] px-3 text-[10px] font-semibold transition ${
         isLight
-          ? 'bg-background text-navy hover:bg-white/90'
-          : 'bg-white/10 text-primary-foreground ring-1 ring-white/30 hover:bg-white/20'
+          ? 'bg-white text-[#082c75] hover:bg-white/90'
+          : 'bg-transparent text-white ring-1 ring-white/80 hover:bg-white/10'
       }`}
     >
       Apply Now
       <span
-        className={`grid h-6 w-6 place-items-center rounded-full ${
-          isLight ? 'bg-navy text-primary-foreground' : 'bg-white/20'
+        className={`grid h-4 w-4 place-items-center rounded-full transition ${
+          isLight
+            ? 'bg-[#082c75] text-white group-hover:bg-[#061f54]'
+            : 'bg-white/10 text-white'
         }`}
       >
-        <ArrowRightIcon className="h-3.5 w-3.5" />
+        <ArrowRightIcon className="h-2.5 w-2.5" />
       </span>
     </button>
   )

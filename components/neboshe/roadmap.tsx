@@ -5,7 +5,7 @@ const MILESTONES = [
   },
   {
     year: '2025',
-    text: 'Expand global reach and digital capabilities.',
+    text: 'Expand global reach and digital capabilities',
   },
   {
     year: '2026',
@@ -19,19 +19,18 @@ const MILESTONES = [
 
 export function Roadmap() {
   return (
-    <section className="bg-navy py-14 text-primary-foreground lg:py-16">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <h2 className="text-center text-3xl font-bold sm:text-4xl">
+    <section className="bg-[#082c75] py-[28px] text-white">
+      <div className="mx-auto max-w-[900px] px-4">
+        <h2 className="text-center text-[32px] font-semibold leading-none tracking-[-0.03em]">
           Our Roadmap 2024-2027
         </h2>
 
-        <div className="relative mt-12">
-          {/* horizontal line with arrow (desktop) */}
-          <div className="absolute left-0 right-0 top-[68px] hidden items-center md:flex">
-            <span className="h-2 w-2 rotate-45 bg-white/50" />
-            <span className="h-px flex-1 bg-white/50" />
+        <div className="relative mx-auto mt-[34px] h-[128px] max-w-[835px]">
+          <div className="absolute left-[2px] right-[4px] top-[35px] flex items-center">
+            <span className="h-[10px] w-[10px] rotate-45 bg-white/70" />
+            <span className="h-[4px] flex-1 bg-white/80" />
             <svg
-              className="h-3 w-3 text-white/80"
+              className="h-[16px] w-[16px] text-white"
               viewBox="0 0 12 12"
               fill="currentColor"
               aria-hidden="true"
@@ -40,15 +39,32 @@ export function Roadmap() {
             </svg>
           </div>
 
-          <ol className="grid gap-10 md:grid-cols-4 md:gap-4">
-            {MILESTONES.map((m) => (
-              <li key={m.year} className="relative flex flex-col items-center text-center md:items-start md:text-left">
-                <span className="text-xl font-semibold">{m.year}</span>
-                <span className="my-3 grid h-6 w-6 place-items-center rounded-full bg-white">
-                  <span className="h-2.5 w-2.5 rounded-full bg-navy" />
+          <ol className="relative grid grid-cols-4">
+            {MILESTONES.map((item, index) => (
+              <li
+                key={item.year}
+                className="relative flex flex-col"
+                style={{
+                  paddingLeft:
+                    index === 0
+                      ? '126px'
+                      : index === 1
+                        ? '104px'
+                        : index === 2
+                          ? '92px'
+                          : '78px',
+                }}
+              >
+                <span className="text-[16px] font-semibold leading-none">
+                  {item.year}
                 </span>
-                <p className="max-w-[14rem] text-xs leading-relaxed text-white/75">
-                  {m.text}
+
+                <span className="mt-[15px] grid h-[31px] w-[31px] place-items-center rounded-full bg-white">
+                  <span className="h-[17px] w-[17px] rounded-full bg-[#082c75]" />
+                </span>
+
+                <p className="mt-[14px] max-w-[116px] text-[10px] font-medium leading-[1.35] text-white">
+                  {item.text}
                 </p>
               </li>
             ))}

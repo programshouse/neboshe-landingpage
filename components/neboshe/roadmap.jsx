@@ -19,19 +19,18 @@ const MILESTONES = [
 
 export function Roadmap() {
   return (
-    <section className="bg-navy py-14 text-primary-foreground lg:py-16">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <h2 className="text-center text-3xl font-bold sm:text-4xl">
+    <section className="bg-[#082c75] py-[22px] text-white lg:py-[28px]">
+      <div className="mx-auto max-w-[980px] px-4 sm:px-6">
+        <h2 className="text-center text-[32px] font-semibold leading-none tracking-[-0.03em] text-white sm:text-[36px]">
           Our Roadmap 2024-2027
         </h2>
 
-        <div className="relative mt-12">
-          {/* horizontal line with arrow (desktop) */}
-          <div className="absolute left-0 right-0 top-[68px] hidden items-center md:flex">
-            <span className="h-2 w-2 rotate-45 bg-white/50" />
-            <span className="h-px flex-1 bg-white/50" />
+        <div className="relative mt-[34px]">
+          <div className="absolute left-[44px] right-[30px] top-[37px] hidden items-center md:flex">
+            <span className="h-[10px] w-[10px] rotate-45 bg-white/70" />
+            <span className="h-[4px] flex-1 bg-white/80" />
             <svg
-              className="h-3 w-3 text-white/80"
+              className="h-[16px] w-[16px] text-white"
               viewBox="0 0 12 12"
               fill="currentColor"
               aria-hidden="true"
@@ -40,14 +39,21 @@ export function Roadmap() {
             </svg>
           </div>
 
-          <ol className="grid gap-10 md:grid-cols-4 md:gap-4">
+          <ol className="grid gap-10 md:grid-cols-4 md:gap-0">
             {MILESTONES.map((m) => (
-              <li key={m.year} className="relative flex flex-col items-center text-center md:items-start md:text-left">
-                <span className="text-xl font-semibold">{m.year}</span>
-                <span className="my-3 grid h-6 w-6 place-items-center rounded-full bg-white">
-                  <span className="h-2.5 w-2.5 rounded-full bg-navy" />
+              <li
+                key={m.year}
+                className="relative flex flex-col items-center text-center"
+              >
+                <span className="text-[16px] font-semibold leading-none text-white">
+                  {m.year}
                 </span>
-                <p className="max-w-[14rem] text-xs leading-relaxed text-white/75">
+
+                <span className="my-[14px] grid h-[31px] w-[31px] place-items-center rounded-full bg-white">
+                  <span className="h-[17px] w-[17px] rounded-full bg-[#082c75]" />
+                </span>
+
+                <p className="max-w-[116px] text-[8px] font-medium leading-[1.35] text-white">
                   {m.text}
                 </p>
               </li>
