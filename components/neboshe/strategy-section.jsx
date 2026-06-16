@@ -44,7 +44,7 @@ const VALUES = [
 
 export function StrategySection() {
   return (
-    <section className="mx-auto max-w-[1240px] px-4 py-12 sm:px-6 lg:py-16">
+  <section className="mx-auto max-w-7xl px-8 py-12 lg:px-12 lg:py-16">
       <h2 className="text-3xl font-bold text-navy sm:text-4xl">
         Our Strategy
       </h2>
@@ -101,7 +101,7 @@ export function StrategySection() {
 
 function CeoMessage() {
   return (
-    <div className="mt-8 grid min-h-[200px] overflow-hidden rounded-[10px] bg-[#e9eef6] lg:grid-cols-[58.5%_41.5%]">
+    <div className="mt-18 grid min-h-[200px] overflow-hidden rounded-[10px] bg-[#e9eef6] lg:grid-cols-[58.5%_41.5%]">
       <div className="flex min-h-[200px]">
         <div className="relative w-[155px] shrink-0">
           <img
