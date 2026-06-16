@@ -19,18 +19,20 @@ const MILESTONES = [
 
 export function Roadmap() {
   return (
-    <section className="bg-[#082c75] py-[22px] text-white lg:py-[28px]">
+    <section className="bg-[#082c75] py-8 text-white lg:py-10">
       <div className="mx-auto max-w-[980px] px-4 sm:px-6">
-        <h2 className="text-center text-[32px] font-semibold leading-none tracking-[-0.03em] text-white sm:text-[36px]">
+        <h2 className="text-center text-[24px] font-semibold tracking-[-0.03em] text-white sm:text-[30px] lg:text-[36px]">
           Our Roadmap 2024-2027
         </h2>
 
-        <div className="relative mt-[34px]">
-          <div className="absolute left-[44px] right-[30px] top-[37px] hidden items-center md:flex">
-            <span className="h-[10px] w-[10px] rotate-45 bg-white/70" />
-            <span className="h-[4px] flex-1 bg-white/80" />
+        <div className="relative mt-8">
+          <div className="absolute left-[16px] right-[16px] top-[27px] flex items-center sm:left-[28px] sm:right-[24px] sm:top-[30px] lg:left-[44px] lg:right-[30px] lg:top-[37px]">
+            <span className="h-[7px] w-[7px] rotate-45 bg-white/70 sm:h-[8px] sm:w-[8px] lg:h-[10px] lg:w-[10px]" />
+
+            <span className="h-[3px] flex-1 bg-white/80 lg:h-[4px]" />
+
             <svg
-              className="h-[16px] w-[16px] text-white"
+              className="h-[12px] w-[12px] text-white lg:h-[16px] lg:w-[16px]"
               viewBox="0 0 12 12"
               fill="currentColor"
               aria-hidden="true"
@@ -39,21 +41,21 @@ export function Roadmap() {
             </svg>
           </div>
 
-          <ol className="grid gap-10 md:grid-cols-4 md:gap-0">
+          <ol className="grid grid-cols-4 gap-2 sm:gap-4 lg:gap-0">
             {MILESTONES.map((m) => (
               <li
                 key={m.year}
                 className="relative flex flex-col items-center text-center"
               >
-                <span className="text-[16px] font-semibold leading-none text-white">
+                <span className="text-[11px] font-semibold leading-none text-white sm:text-[14px] lg:text-[16px]">
                   {m.year}
                 </span>
 
-                <span className="my-[14px] grid h-[31px] w-[31px] place-items-center rounded-full bg-white">
-                  <span className="h-[17px] w-[17px] rounded-full bg-[#082c75]" />
+                <span className="my-3 grid h-[22px] w-[22px] place-items-center rounded-full bg-white sm:h-[26px] sm:w-[26px] lg:my-[14px] lg:h-[31px] lg:w-[31px]">
+                  <span className="h-[12px] w-[12px] rounded-full bg-[#082c75] sm:h-[14px] sm:w-[14px] lg:h-[17px] lg:w-[17px]" />
                 </span>
 
-                <p className="max-w-[116px] text-[8px] font-medium leading-[1.35] text-white">
+                <p className="max-w-[72px] text-[6px] font-medium leading-[1.35] text-white sm:max-w-[95px] sm:text-[7px] lg:max-w-[116px] lg:text-[8px]">
                   {m.text}
                 </p>
               </li>

@@ -94,7 +94,7 @@ export function TrustedStats() {
             className="min-h-[182px] rounded-[8px] border border-[#E1E1E1] bg-white px-7 py-6"
           >
             <span className="grid h-[28px] w-[28px] place-items-center rounded-[4px] bg-[#EEF1F6] text-[#00358E]">
-              <Icon className="h-[17px] w-[17px]" />
+              <Icon className="h-[20px] w-[20px]" />
             </span>
 
             <p className="mt-3 text-[34px] font-bold leading-none tracking-[-0.03em] text-[#06142F]">
