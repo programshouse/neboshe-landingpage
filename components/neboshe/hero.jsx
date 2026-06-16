@@ -11,7 +11,7 @@ const heroImages = [
   },
   {
     src: '/images/image 19 (1).png',
-    alt: 'NEBOSH safety representative in a high visibility vest',
+    alt: 'NEBOSHE safety representative in a high visibility vest',
   },
 ]
 
