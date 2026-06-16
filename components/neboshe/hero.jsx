@@ -30,21 +30,21 @@ export function Hero() {
           />
 
           <div className="relative flex w-full flex-col justify-center pr-[18px]">
-            <span className="inline-flex w-fit items-center gap-[6px] rounded-full bg-white px-[14px] py-[7px] text-[12px] font-semibold leading-none text-[#082c75]">
+            <span className="inline-flex w-fit items-center gap-[6px] rounded-full bg-white px-[14px] py-[7px] text-[10px] font-semibold leading-none text-[#082c75] sm:text-[11px] lg:text-[12px]">
               <span className="h-[5px] w-[5px] rounded-full bg-[#082c75]" />
               2024–2027 Strategy
             </span>
 
-            <h1 className="mt-[18px] text-[31px] font-semibold leading-[1.35] tracking-[-0.03em] text-white">
+            <h1 className="mt-[18px] text-[28px] font-semibold leading-[1.35] tracking-[-0.03em] text-white sm:text-[30px] lg:text-[31px]">
               Developing Our Potential
             </h1>
 
-            <p className="mt-[10px] max-w-[95%] text-[15px] font-normal leading-[1.65] text-white/95">
+            <p className="mt-[10px] max-w-[95%] text-[13px] font-normal leading-[1.65] text-white/95 sm:text-[14px] lg:text-[15px]">
               Our strategy empowers people and organizations worldwide to build
               safer, healthier and more sustainable workplaces
             </p>
 
-            <div className="mt-[18px] flex items-center gap-[16px]">
+            <div className="mt-[18px] flex items-center gap-[12px] sm:gap-[16px]">
               <ApplyButton variant="light" />
               <ApplyButton variant="outline" />
             </div>
@@ -77,7 +77,7 @@ function ApplyButton({ variant = 'light' }) {
   return (
     <button
       type="button"
-      className={`group inline-flex h-[30px] items-center justify-center gap-[8px] rounded-[4px] px-[22px] text-[14px] font-medium transition ${
+      className={`group inline-flex h-[28px] sm:h-[30px] items-center justify-center gap-[6px] sm:gap-[8px] rounded-[4px] px-[14px] sm:px-[18px] lg:px-[22px] text-[10px] sm:text-[11px] lg:text-[13px] font-medium transition ${
         isLight
           ? 'bg-white text-[#082c75] hover:bg-white/90'
           : 'bg-transparent text-white ring-1 ring-white/70 hover:bg-white/10'
@@ -85,7 +85,7 @@ function ApplyButton({ variant = 'light' }) {
     >
       Apply Now
 
-      <ArrowRightIcon className="h-[12px] w-[12px] transition-transform group-hover:translate-x-0.5" />
+      <ArrowRightIcon className="h-[10px] w-[10px] sm:h-[12px] sm:w-[12px] transition-transform group-hover:translate-x-0.5" />
     </button>
   )
 }

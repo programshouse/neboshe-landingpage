@@ -44,24 +44,23 @@ const VALUES = [
 
 export function StrategySection() {
   return (
-  <section className="mx-auto max-w-7xl px-8 py-12 lg:px-12 lg:py-16">
-      <h2 className="text-3xl font-bold text-navy sm:text-4xl">
+    <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-12 lg:px-12 lg:py-16">
+      <h2 className="text-center text-[28px] font-bold text-navy sm:text-left sm:text-4xl">
         Our Strategy
       </h2>
 
-      <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mt-7 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {FEATURES.map(({ icon: Icon, title, text }) => (
           <article
             key={title}
-            className="flex gap-3 rounded-xl border border-border bg-card p-5 shadow-sm"
+            className="flex gap-4 rounded-xl border border-border bg-card p-5 shadow-sm"
           >
-            <span className="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-accent text-navy">
+            <span className="grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-accent text-navy">
               <Icon className="h-5 w-5" />
             </span>
 
             <div>
               <h3 className="text-sm font-semibold text-navy">{title}</h3>
-
               <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
                 {text}
               </p>
@@ -72,11 +71,11 @@ export function StrategySection() {
 
       <CeoMessage />
 
-      <h2 className="mt-16 text-center text-3xl font-bold text-navy sm:text-4xl">
+      <h2 className="mt-14 text-center text-[28px] font-bold text-navy sm:mt-16 sm:text-4xl">
         Our Strategy
       </h2>
 
-      <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
+      <div className="mt-7 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
         {VALUES.map(({ icon: Icon, title }) => (
           <article
             key={title}
@@ -84,9 +83,7 @@ export function StrategySection() {
           >
             <Icon className="mx-auto h-6 w-6 text-navy" />
 
-            <h3 className="mt-3 text-base font-semibold text-navy">
-              {title}
-            </h3>
+            <h3 className="mt-3 text-base font-semibold text-navy">{title}</h3>
 
             <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
               We embrace innovation to create contemporary, relevant and
@@ -101,22 +98,22 @@ export function StrategySection() {
 
 function CeoMessage() {
   return (
-    <div className="mt-18 grid min-h-[200px] overflow-hidden rounded-[10px] bg-[#e9eef6] lg:grid-cols-[58.5%_41.5%]">
-      <div className="flex min-h-[200px]">
-        <div className="relative w-[155px] shrink-0">
+    <div className="mt-12 overflow-hidden rounded-[10px] bg-[#e9eef6] lg:mt-18 lg:grid lg:min-h-[200px] lg:grid-cols-[58.5%_41.5%]">
+      <div className="relative flex flex-col px-5 pt-7 sm:min-h-[280px] sm:flex-row sm:px-7 sm:pt-0 lg:min-h-[200px] lg:px-0">
+        <div className="order-2 mt-5 flex justify-center sm:order-1 sm:mt-0 sm:w-[210px] sm:shrink-0 sm:items-end lg:w-[155px]">
           <img
             src="/images/graduate.png"
             alt="Chief Executive"
-            className="absolute bottom-0 left-4 h-[182px] w-[128px] object-contain object-bottom"
+            className="h-[210px] w-auto object-contain object-bottom sm:h-[255px] lg:h-[182px]"
           />
         </div>
 
-        <div className="flex flex-col justify-center py-5 pr-8">
-          <h3 className="text-[21px] font-bold leading-[1.2] tracking-[-0.02em] text-[#082c75]">
+        <div className="order-1 flex flex-col justify-center text-center sm:order-2 sm:flex-1 sm:py-6 sm:pr-8 sm:text-left lg:py-5">
+          <h3 className="text-[25px] font-bold leading-[1.12] tracking-[-0.02em] text-[#082c75] sm:text-[30px] lg:text-[21px]">
             A message from our chief executive
           </h3>
 
-          <p className="mt-[10px] max-w-[485px] text-[11px] font-medium leading-[1.45] tracking-[0.01em] text-[#4b5563]">
+          <p className="mt-3 text-[13px] font-medium leading-[1.55] text-[#1f2f46] sm:max-w-[520px] lg:mt-[10px] lg:text-[11px] lg:leading-[1.45]">
             Our 2024 - 2027 Strategy is built on collaboration, innovation and a
             deep commitment to our global community. Together, we will continue
             to raise standards and develop the skills needed to create safer,
@@ -125,15 +122,15 @@ function CeoMessage() {
 
           <button
             type="button"
-            className="mt-[22px] h-[30px] w-fit rounded-[4px] bg-[#082c75] px-[14px] text-[11px] font-semibold text-white transition hover:bg-[#061f55]"
+            className="mx-auto mt-5 h-[34px] w-fit rounded-[4px] bg-[#082c75] px-5 text-[12px] font-semibold leading-none text-white transition hover:bg-[#061f55] sm:mx-0 lg:mt-[22px] lg:h-[30px] lg:px-[14px] lg:text-[11px]"
           >
             Watch Full Message
           </button>
         </div>
       </div>
 
-      <div className="flex min-h-[182px] items-center justify-center bg-[#062765] p-[10px]">
-        <div className="relative h-full min-h-[162px] w-full overflow-hidden rounded-[8px] bg-[#082c75]">
+      <div className="flex min-h-[180px] items-center justify-center bg-[#062765] p-[10px] sm:min-h-[220px] lg:min-h-[182px]">
+        <div className="relative h-full min-h-[165px] w-full overflow-hidden rounded-[8px] bg-[#082c75] sm:min-h-[200px] lg:min-h-[162px]">
           <img
             src="/images/strategy-banner.png"
             alt="Strategy Banner"
@@ -142,11 +139,11 @@ function CeoMessage() {
 
           <div className="absolute inset-0 bg-[#082c75]/70" />
 
-          <div className="relative flex h-full items-center justify-end px-[22px] py-5 text-white">
+          <div className="relative flex h-full min-h-[165px] items-center justify-center px-6 py-5 text-white sm:min-h-[200px] lg:min-h-[162px] lg:justify-end">
             <button
               type="button"
               aria-label="Play strategy video"
-              className="grid h-[46px] w-[46px] place-items-center rounded-full bg-[#062765]/80 ring-[4px] ring-white transition hover:bg-[#062765]"
+              className="grid h-[52px] w-[52px] place-items-center rounded-full bg-[#062765]/80 ring-[4px] ring-white transition hover:bg-[#062765] lg:h-[46px] lg:w-[46px]"
             >
               <PlayIcon className="h-[18px] w-[18px] translate-x-[2px] text-white" />
             </button>
