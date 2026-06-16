@@ -45,8 +45,8 @@ export function Hero() {
             </p>
 
             <div className="mt-[18px] flex items-center gap-[12px] sm:gap-[16px]">
-              <ApplyButton variant="light" />
-              <ApplyButton variant="outline" />
+              <ApplyButton variant="light" label="Apply Now" />
+              <ApplyButton variant="outline" label="Contact Us" />
             </div>
           </div>
         </div>
@@ -71,21 +71,21 @@ export function Hero() {
   )
 }
 
-function ApplyButton({ variant = 'light' }) {
+function ApplyButton({ variant = 'light', label = 'Apply Now' }) {
   const isLight = variant === 'light'
 
   return (
     <button
       type="button"
-      className={`group inline-flex h-[28px] sm:h-[30px] items-center justify-center gap-[6px] sm:gap-[8px] rounded-[4px] px-[14px] sm:px-[18px] lg:px-[22px] text-[10px] sm:text-[11px] lg:text-[13px] font-medium transition ${
+      className={`group inline-flex h-[28px] items-center justify-center gap-[6px] rounded-[4px] px-[14px] text-[10px] font-medium transition sm:h-[30px] sm:gap-[8px] sm:px-[18px] sm:text-[11px] lg:px-[22px] lg:text-[13px] ${
         isLight
           ? 'bg-white text-[#082c75] hover:bg-white/90'
           : 'bg-transparent text-white ring-1 ring-white/70 hover:bg-white/10'
       }`}
     >
-      Apply Now
+      {label}
 
-      <ArrowRightIcon className="h-[10px] w-[10px] sm:h-[12px] sm:w-[12px] transition-transform group-hover:translate-x-0.5" />
+      <ArrowRightIcon className="h-[10px] w-[10px] transition-transform group-hover:translate-x-0.5 sm:h-[12px] sm:w-[12px]" />
     </button>
   )
 }
