@@ -9,23 +9,12 @@ const base = {
 
 export function NeboshLogo({ className }) {
   return (
-    <svg
+    <img
+      src="/logo.svg"
       className={className}
-      viewBox="0 0 64 64"
-      fill="none"
+      alt="Neboshe logo"
       aria-hidden="true"
-      role="img"
-    >
-      <rect x="2" y="2" width="60" height="60" rx="10" fill="currentColor" />
-      <g stroke="#fff" strokeWidth="1.6" fill="none">
-        <circle cx="32" cy="32" r="17" />
-        <ellipse cx="32" cy="32" rx="7.5" ry="17" />
-        <ellipse cx="32" cy="32" rx="17" ry="7.5" />
-        <line x1="15" y1="32" x2="49" y2="32" />
-        <line x1="32" y1="15" x2="32" y2="49" />
-      </g>
-      <circle cx="44" cy="20" r="3.2" fill="#1d4ed8" />
-    </svg>
+    />
   )
 }
 

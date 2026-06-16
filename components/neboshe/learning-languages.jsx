@@ -18,35 +18,39 @@ export function LearningLanguages() {
         {VIDEOS.map((video, i) => (
           <article
             key={i}
-            className="overflow-hidden rounded-xl border border-border bg-card shadow-sm"
+            className="overflow-hidden rounded-xl border border-border bg-card shadow-sm transition-shadow hover:shadow-md"
           >
-            <div className="relative aspect-video">
+            <div className="relative m-2 aspect-video overflow-hidden rounded-lg">
               <img
                 src="/images/video-presenter.png"
-                alt={`${video.language} learning video presenter at a whiteboard`}
-                className="absolute inset-0 h-full w-full object-cover"
+                alt={`${video.language} learning video presenter`}
+                className="h-full w-full object-cover"
               />
-              <div className="absolute inset-0 bg-navy/10" aria-hidden="true" />
 
-              <div className="absolute left-2 top-2 flex items-center gap-1 text-primary-foreground">
-                <NeboshLogo className="h-7 w-7 text-navy" />
-                <span className="text-[10px] font-bold">Neboshe</span>
+              <div className="absolute left-2 top-2 flex flex-col items-center">
+                <NeboshLogo className="h-8 w-8 text-white" />
+                <span className="mt-0.5 text-[8px] font-semibold leading-none text-white">
+                  Nebosh
+                </span>
               </div>
 
               <button
                 type="button"
                 aria-label={`Play ${video.language} video`}
-                className="absolute left-1/2 top-1/2 grid h-12 w-12 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full bg-navy/85 transition hover:bg-navy"
+                className="absolute left-1/2 top-1/2 grid h-14 w-14 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full border-4 border-white bg-navy shadow-lg transition hover:scale-105"
               >
-                <PlayIcon className="h-5 w-5 translate-x-0.5 text-primary-foreground" />
+                <PlayIcon className="h-5 w-5 translate-x-0.5 text-white" />
               </button>
 
-              <span className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent px-3 py-2 text-xs font-medium text-primary-foreground">
-                Developing Our Potential
-              </span>
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent px-3 py-2">
+                <p className="text-xs font-medium text-white">
+                  Developing Our Potential
+                </p>
+              </div>
             </div>
-            <div className="p-4">
-              <h3 className="text-lg font-semibold text-navy">
+
+            <div className="px-3 pb-4 pt-1">
+              <h3 className="text-xl font-medium text-[#00358E]">
                 {video.language}
               </h3>
             </div>
@@ -54,10 +58,10 @@ export function LearningLanguages() {
         ))}
       </div>
 
-      <div className="mt-10 flex justify-center">
+      <div className="mt-12 flex justify-center">
         <button
           type="button"
-          className="rounded-md bg-navy px-10 py-3 text-sm font-semibold text-primary-foreground transition hover:bg-navy-dark"
+          className="min-w-[220px] rounded-md bg-[#00358E] px-8 py-3 text-sm font-medium text-white transition hover:bg-[#002b72]"
         >
           View All Videos
         </button>
