@@ -1,4 +1,4 @@
-import { NeboshLogo, ArrowRightIcon } from './icons'
+import { NEBOSHENGLANDLogo, ArrowRightIcon } from './icons'
 
 const QUICK_LINKS = [
   'Find a Course',
@@ -17,8 +17,8 @@ export function SiteFooter() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2">
-              <NeboshLogo className="h-9 w-9 text-navy-dark" />
-              <span className="text-lg font-semibold">Neboshe</span>
+              <NEBOSHENGLANDLogo className="h-9 w-9 text-navy-dark" />
+              <span className="text-lg font-semibold">NEBOSHENGLAND</span>
             </div>
             <p className="mt-4 max-w-xs text-xs leading-relaxed text-white/70">
               Setting the global standard in health, safety, and environmental
@@ -68,7 +68,7 @@ export function SiteFooter() {
 
         <div className="mt-12 flex flex-col gap-4 border-t border-white/15 pt-6 text-xs text-white/60 sm:flex-row sm:items-center sm:justify-between">
           <p>
-            © 2024 NEBOSH. All rights reserved. Global Authority in Professional
+            © 2024 NEBOSHENGLAND. All rights reserved. Global Authority in Professional
             Education.
           </p>
           <ul className="flex flex-wrap gap-5">

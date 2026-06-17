@@ -1,27 +1,27 @@
 'use client'
 
 import { useState } from 'react'
-import { NeboshLogo, PlayIcon } from './icons'
+import { NEBOSHENGLANDLogo, PlayIcon } from './icons'
 
 const VIDEOS = [
   {
     language: 'Arabic',
-    title: 'Neboshe Course in Arabic - Saudi Arabia',
+    title: 'NEBOSHENGLAND Course in Arabic - Saudi Arabia',
     youtubeId: 'qS8Wv0yvy8M',
   },
   {
     language: 'English',
-    title: 'Neboshe Health and Safety Training',
+    title: 'NEBOSHENGLAND Health and Safety Training',
     youtubeId: 'P4GPVLin7HQ',
   },
   {
     language: 'French',
-    title: 'Neboshe Health and Safety Training in French',
+    title: 'NEBOSHENGLAND Health and Safety Training in French',
     youtubeId: '8HeaemNau2g',
   },
   {
     language: 'Urdu',
-    title: 'Neboshe Safety Training for Saudi Workplace',
+    title: 'NEBOSHENGLAND Safety Training for Saudi Workplace',
     youtubeId: 'KKsEBsbUJZg',
   },
 ]
@@ -55,9 +55,9 @@ export function LearningLanguages() {
               <div className="absolute inset-0 bg-black/25" />
 
               <div className="absolute left-2 top-2 flex flex-col items-center">
-                <NeboshLogo className="h-8 w-8 text-white" />
+                <NEBOSHENGLANDLogo className="h-8 w-8 text-white" />
                 <span className="mt-0.5 text-[8px] font-semibold leading-none text-white">
-                  Neboshe
+                  NEBOSHENGLAND
                 </span>
               </div>
 
@@ -85,14 +85,14 @@ export function LearningLanguages() {
         ))}
       </div>
 
-      <div className="mt-12 flex justify-center">
+      {/* <div className="mt-12 flex justify-center">
         <button
           type="button"
           className="min-w-[220px] rounded-md bg-[#00358E] px-8 py-3 text-sm font-medium text-white transition hover:bg-[#002b72]"
         >
           View All Videos
         </button>
-      </div>
+      </div> */}
 
       {activeVideo && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 px-4">

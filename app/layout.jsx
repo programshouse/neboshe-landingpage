@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata = {
-  title: 'NEBOSHE Strategy 2024-2027 | Developing Our Potential',
+  title: 'NEBOSHENGLAND Strategy 2024-2027 | Developing Our Potential',
   description:
-    'NEBOSHE strategy empowers people and organizations worldwide to build safer, healthier and more sustainable workplaces.',
+    'NEBOSHENGLAND strategy empowers people and organizations worldwide to build safer, healthier and more sustainable workplaces.',
   generator: 'v0.app',
   icons: {
     icon: [

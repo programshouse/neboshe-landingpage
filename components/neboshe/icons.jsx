@@ -7,12 +7,12 @@ const base = {
   viewBox: '0 0 24 24',
 }
 
-export function NeboshLogo({ className }) {
+export function NEBOSHENGLANDLogo({ className }) {
   return (
     <img
       src="/logo.svg"
       className={className}
-      alt="Neboshe logo"
+      alt="NEBOSHENGLAND logo"
       aria-hidden="true"
     />
   )

@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { NeboshLogo, SearchIcon, PhoneIcon, UserIcon } from './icons'
+import { NEBOSHENGLANDLogo, SearchIcon, PhoneIcon, UserIcon } from './icons'
 
 const NAV_ITEMS = [
   'Home',
@@ -21,8 +21,8 @@ export function SiteHeader() {
       <div className="bg-navy text-primary-foreground">
         <div className="mx-auto flex max-w-7xl items-center gap-4 px-4 py-3 sm:px-6 md:flex">
           <a href="#" className="flex shrink-0 items-center gap-2">
-            <NeboshLogo className="h-9 w-9 text-navy-dark" />
-            <span className="text-sm font-semibold tracking-wide">NEBOSHE</span>
+            <NEBOSHENGLANDLogo className="h-9 w-9 text-navy-dark" />
+            <span className="text-sm font-semibold tracking-wide">NEBOSHENGLAND</span>
           </a>
 
           {/* Desktop Search */}
