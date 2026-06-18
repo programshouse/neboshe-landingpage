@@ -19,7 +19,10 @@ const MILESTONES = [
 
 export function Roadmap() {
   return (
-    <section className="bg-[#082c75] py-8 text-white lg:py-10">
+    <section
+      id="our-roadmap-2024-2027"
+      className="bg-[#082c75] py-8 text-white lg:py-10"
+    >
       <div className="mx-auto max-w-[980px] px-4 sm:px-6">
         <h2 className="text-center text-[24px] font-semibold tracking-[-0.03em] text-white sm:text-[30px] lg:text-[36px]">
           Our Roadmap 2024-2027

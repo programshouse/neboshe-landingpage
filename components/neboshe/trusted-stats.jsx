@@ -77,12 +77,12 @@ function CountUp({ end }) {
     return () => observer.disconnect()
   }, [end])
 
-  return <span ref={ref}>{count.toLocaleString()}</span>
+  return <span ref={ref}>{count.toLocaleString('en-US')}</span>
 }
 
 export function TrustedStats() {
   return (
-    <section className="mx-auto max-w-7xl px-4 py-7">
+    <section id="trusted-by-professionals" className="mx-auto max-w-7xl px-4 py-7">
       <h2 className="text-center text-[32px] font-bold leading-tight text-[#06142F]">
         Trusted by Professionals
       </h2>

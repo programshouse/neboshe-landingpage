@@ -44,7 +44,10 @@ const VALUES = [
 
 export function StrategySection() {
   return (
-    <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-12 lg:px-12 lg:py-16">
+    <section
+      id="our-strategy"
+      className="mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-12 lg:px-12 lg:py-16"
+    >
       <h2 className="text-center text-[28px] font-bold text-navy sm:text-left sm:text-4xl">
         Our Strategy
       </h2>

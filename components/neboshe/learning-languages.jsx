@@ -30,7 +30,10 @@ export function LearningLanguages() {
   const [activeVideo, setActiveVideo] = useState(null)
 
   return (
-    <section className="mx-auto max-w-[1500px] px-4 py-14 sm:px-6 lg:py-20">
+    <section
+      id="learning-in-your-language"
+      className="mx-auto max-w-[1500px] px-4 py-14 sm:px-6 lg:py-20"
+    >
       <h2 className="text-center text-3xl font-bold text-navy sm:text-4xl">
         Learning In Your Language
       </h2>
@@ -41,10 +44,18 @@ export function LearningLanguages() {
             key={video.youtubeId}
             className="overflow-hidden rounded-xl border border-border bg-card shadow-sm transition-shadow hover:shadow-md"
           >
-            <button
-              type="button"
+            <div
+              role="button"
+              tabIndex={0}
+              aria-label={`Play ${video.title}`}
               onClick={() => setActiveVideo(video)}
-              className="group relative m-2 block aspect-[16/11] w-[calc(100%-1rem)] overflow-hidden rounded-lg bg-black text-left"
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault()
+                  setActiveVideo(video)
+                }
+              }}
+              className="group relative m-2 block aspect-[16/11] w-[calc(100%-1rem)] cursor-pointer overflow-hidden rounded-lg bg-black text-left"
             >
               <img
                 src={`https://img.youtube.com/vi/${video.youtubeId}/hqdefault.jpg`}
@@ -66,11 +77,11 @@ export function LearningLanguages() {
               </span>
 
               <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent px-3 py-3">
-                <p className="text-xs font-medium text-white">
+                <span className="text-xs font-medium text-white">
                   Developing Our Potential
-                </p>
+                </span>
               </div>
-            </button>
+            </div>
 
             <div className="px-3 pb-4 pt-1">
               <h3 className="text-xl font-medium text-[#00358E]">

@@ -17,7 +17,7 @@ const heroImages = [
 
 export function Hero() {
   return (
-    <section className="w-full overflow-hidden bg-white">
+    <section id="home" className="w-full overflow-hidden bg-white">
       <div className="grid min-h-[258px] grid-cols-1 lg:grid-cols-[34%_66%]">
         {/* Left Content */}
         <div className="relative flex min-h-[258px] bg-[#082c75] px-[26px] py-[20px] text-white">

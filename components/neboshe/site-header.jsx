@@ -4,12 +4,11 @@ import { useState } from 'react'
 import { NEBOSHENGLANDLogo, SearchIcon, PhoneIcon, UserIcon } from './icons'
 
 const NAV_ITEMS = [
-  'Home',
-  'About',
-  'Qualification',
-  'Where to study',
-  'News & Events',
-  'FAQ',
+  { label: 'Home', href: '#home' },
+  { label: 'Our Strategy', href: '#our-strategy' },
+  { label: 'Our Roadmap 2024-2027', href: '#our-roadmap-2024-2027' },
+  { label: 'Learning In Your Language', href: '#learning-in-your-language' },
+  { label: 'Trusted by Professionals', href: '#trusted-by-professionals' },
 ]
 
 export function SiteHeader() {
@@ -20,7 +19,7 @@ export function SiteHeader() {
       {/* Top navy bar */}
       <div className="bg-navy text-primary-foreground">
         <div className="mx-auto flex max-w-7xl items-center gap-4 px-4 py-3 sm:px-6 md:flex">
-          <a href="#" className="flex shrink-0 items-center gap-2">
+          <a href="#home" className="flex shrink-0 items-center gap-2">
             <NEBOSHENGLANDLogo className="h-9 w-9 text-navy-dark" />
             <span className="text-sm font-semibold tracking-wide">NEBOSHENGLAND</span>
           </a>
@@ -117,13 +116,13 @@ export function SiteHeader() {
       {/* Desktop nav */}
       <nav className="hidden border-b border-border bg-background md:block">
         <ul className="mx-auto flex max-w-7xl items-center justify-center gap-x-8 px-4 py-4 sm:px-6">
-          {NAV_ITEMS.map((item) => (
-            <li key={item}>
+          {NAV_ITEMS.map(({ label, href }) => (
+            <li key={href}>
               <a
-                href="#"
+                href={href}
                 className="text-sm font-medium text-foreground/80 transition hover:text-navy"
               >
-                {item}
+                {label}
               </a>
             </li>
           ))}
@@ -137,14 +136,14 @@ export function SiteHeader() {
         }`}
       >
         <ul className="flex flex-col px-4 py-3">
-          {NAV_ITEMS.map((item) => (
-            <li key={item}>
+          {NAV_ITEMS.map(({ label, href }) => (
+            <li key={href}>
               <a
-                href="#"
+                href={href}
                 onClick={() => setIsOpen(false)}
                 className="block rounded-lg px-3 py-3 text-sm font-medium text-foreground/80 transition hover:bg-muted hover:text-navy"
               >
-                {item}
+                {label}
               </a>
             </li>
           ))}
